@@ -29,6 +29,6 @@ app.get("/", (req, res) => {
 
 app.listen(Port, () => {
   console.log(
-    `server running on the port http://localhost:${Port}`.bgCyan.black
+    `server running on the port http://localhost:${Port}`
   );
 });
