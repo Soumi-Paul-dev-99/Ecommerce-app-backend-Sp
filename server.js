@@ -8,7 +8,12 @@ import userRoutes from "./routes/userRoutes.js";
 import cors from "cors";
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin:
+      "https://ecommerce-app-frontend-7txh687xy-soumi-pauls-projects.vercel.app",
+  })
+);
 
 database();
 
