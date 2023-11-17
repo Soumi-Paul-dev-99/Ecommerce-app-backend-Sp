@@ -15,7 +15,12 @@ router.route("/register").post(registerController)
 router.route("/login").post(loginController)
 
 //test routes
-router.route("/test").get(requireSignIn,isAdmin,testController)
+router.route("/test").get(requireSignIn, isAdmin, testController)
+
+//protected route auth
+router.get("/user-auth", requireSignIn, (req, res) => {
+    res.status(200).send({ok:true})
+})
 
 
 
